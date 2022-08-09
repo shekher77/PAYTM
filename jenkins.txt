@@ -1,0 +1,22 @@
+JENKINS : 
+# AUTOMATION TOOLS USED FOR CI CD (CONTINOUS INTEGRATION AND CONTINOUS DELIVERY)
+# OPEN SOURCE , PLUGINS , JAVA 
+# USED BY DEVELOPERS TO INTEGRATE CHANGES CONTINOUS
+# USED FOR BUILD AND TESTING OF PROJECTS CONTINOUSLY
+
+ cat /proc/version
+    1  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    2  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    3  sudo amazon-linux-extras install epel -y
+    4  sudo yum install java-1.8.0-openjdk -y
+    5  yum install jenkins -y
+    6  systemctl restart jenkins
+    7  systemctl status jenkins
+
+IPV4 ---> New tab ipv4:8080 ---> Security groups --> Action ---> Edit inbound Rules ---> Custom Tcp ---> 8080 ---> save
+
+# cat /var/lib/jenkins/secrets/initialAdminPassword ---> Copy paste pasword and give credentials 
+# vim /etc/passwd ---> false = bash
+# visudo
+# vim /etc/ssh/sshd_config
+# systemctl restart sshd
